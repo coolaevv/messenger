@@ -1,1 +1,621 @@
 
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Calibri', sans-serif;
+	box-sizing: border-box;
+}
+body{
+	background-color: #FAFAFA;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.message-user{
+	display: block;
+	width: 100%;
+	margin: 3px auto;
+	padding: 4px;
+}
+.message-user-to{
+	display: block;
+	width: 100%;
+	padding: 4px;
+	margin: 3px auto;
+	text-align: right;
+}
+.text{
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+	background-color: #2980b9;
+	color: #ffffff;
+}
+/*------------------------------------------------------------------------------*/
+.login-form{
+	width: 400px;
+	margin: 10vh auto;
+}
+.login-form #login, #pswd{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ecf0f1;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+.login-form #login:focus, #pswd:focus{
+	border: 1px solid #bdc3c7;
+}
+.login-form .btn-sub-reg{
+	padding: 0;
+}
+.login-form .btn-sub-reg #submit{
+	width: 100px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	margin-top: 5px;
+	background-color: #3498db;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 14px;
+}
+.login-form .btn-sub-reg a{
+	text-decoration: none;
+	color: #3498db;
+	outline: none;
+	font-size: 14px;
+}   /*END LOGIN.HTML*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+.form-registration{
+	width: 400px;
+	margin: 10vh auto;
+
+}
+.form-registration #name, #surname, #email, #pswd-1, #pswd-2{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ecf0f1;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+.form-registration 
+#name:focus,
+#surname:focus,
+#email:focus,
+#pswd-1:focus,
+#pswd-2:focus{
+	border: 1px solid #bdc3c7;
+}
+.form-registration .btn-sub-log{
+	padding: 0;
+}
+.form-registration .btn-sub-log #submit{
+	width: 200px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	margin-top: 5px;
+	background-color: #3498db;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 14px;
+}
+.form-registration .btn-sub-log a{
+	text-decoration: none;
+	color: #3498db;
+	outline: none;
+	font-size: 14px;
+}	/*END REG.HTML*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+header{
+	width: 800px;
+	height: 7vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	background-color: #03A9F4;
+}
+header .menu{
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	align-items: center;
+}
+header .menu nav{
+	padding: 10px;
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	border-radius: 0.5em;
+	box-shadow: 1px 1px 3px 2px #E0E0E0;
+	z-index: 9999;
+	display: none;
+}
+header .menu nav .close{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+header .menu nav .close img{
+	max-width: 100%;
+	opacity: 0.6
+}
+header .menu nav .link-settings{
+	margin-top: 50px;
+}
+header .menu nav .link-settings a{
+	display: block;
+	width: 100%;
+	padding: 2px 10px 2px 10px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 550px;
+	color: #607D8B;
+	margin-bottom: 5px;
+}
+header .menu nav .logo-settings{
+	width: 100%;
+	padding: 5px;
+	margin-top: 30%;
+	display: flex;
+	justify-content: center;
+}
+header .menu nav .logo-settings img{
+	opacity: 0.1;
+}
+header .menu .link-nav{
+	width: 35px;
+	height: 35px;
+	margin-left: 10px;
+	cursor: pointer;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	align-items: center;
+	padding: 3px;
+}
+header .menu .link-nav span{
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+	background-color: black
+}
+header .menu .logo{
+	height: 100%;
+	padding: 7px;
+	font-size: 22px;
+	font-weight: 550;
+	letter-spacing: 1px;
+	color: #34495e;
+}
+header section{
+	height: 100%;
+	color: #FAFAFA;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 550;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+main{
+	width: 800px;
+	height: 92vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+main .contact-list{
+	height: 100%;
+	border: 1px solid #bdc3c7;
+	background-color: #ffffff;
+	padding: 5px;
+}
+main .contact-list .contact{
+	width: 1px solid;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	background-color: #F5F5F5;
+	cursor: pointer;
+	transition: 300ms;
+}
+main .contact-list .contact:hover{
+	background-color: #E0E0E0;
+}
+main .messages-nav{
+	height: 100%;
+	border: 1px solid #bdc3c7;
+	background-color: #ffffff;
+	border-left: none;
+	display: grid;
+	grid-template-rows: 440px 10% 15%;
+}
+main .messages-nav .messages{
+	padding: 10px 40px 5px 40px;
+	overflow-y: scroll;
+}
+main .message-user, .message-user-to{
+	margin-bottom: 5px;
+}
+main .messages-nav .messages p{
+	text-align: center;
+	margin-top: 50%;
+	color: #BDBDBD;
+}
+main .messages-nav .files-send{
+	padding: 10px;
+}
+main .messages-nav .files-send .file-name{
+	padding: 5px;
+	border: 1px solid;
+	background-color: #03A9F4;;
+	border-radius: 3px;
+	display: inline-block;
+	background-color: #03A9F4;
+}
+main .messages-nav .files-send .file-name #close_file{
+	width: 15px;
+	height: 15px;
+	float: right;
+	margin-left: 10px;
+	margin-top: 2px;
+	cursor: pointer;
+	background-image: url('../img/close.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 13px;
+}
+main .messages-nav .send-option{
+	display: grid;
+	grid-template-columns: 10% 80% 10%;
+	align-items: center;
+}
+main .messages-nav .send-option .clip{
+	height: 50%;
+	cursor: pointer;
+	padding: 15px;
+	position: relative;
+}
+main .messages-nav .send-option .clip input[type="file"]{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+main .messages-nav .send-option .clip img{
+	max-width: 100%;
+	opacity: 0.3;
+	z-index: 1;
+}
+main .messages-nav .send-option .text-message{
+	height: 70%;
+	border: 1px solid #BDBDBD;
+	border-radius: 3px;
+}
+main .messages-nav .send-option .text-message textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+	padding: 3px;
+}
+main .messages-nav .send-option .send{
+	height: 50%;
+	cursor: pointer;
+	padding: 15px;
+}
+main .messages-nav .send-option .send img{
+	max-width: 100%;
+	max-height: 100%;
+	opacity: 0.6
+}
+/*------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 700px){
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: 'Calibri', sans-serif;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	/*------------------------------------------------------------------------------*/
+	.login-form{
+		width: 100%;
+		margin: 10vh auto;
+	}
+	.login-form #login, #pswd{
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ecf0f1;
+		border-radius: 3px;
+		margin-top: 5px;
+	}
+	.login-form #login:focus, #pswd:focus{
+		border: 1px solid #bdc3c7;
+	}
+	.login-form .btn-sub-reg{
+		padding: 0;
+	}
+	.login-form .btn-sub-reg #submit{
+		width: 100px;
+		padding: 10px;
+		border: none;
+		border-radius: 3px;
+		margin-top: 5px;
+		background-color: #3498db;
+		color: white;
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 14px;
+	}
+	.login-form .btn-sub-reg a{
+		text-decoration: none;
+		color: #3498db;
+		outline: none;
+		font-size: 14px;
+	}   /*END LOGIN.HTML*/
+	/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+	/*------------------------------------------------------------------------------*/
+	.form-registration{
+		width: 100%;
+	}
+	.form-registration #name, #surname, #email, #pswd-1, #pswd-2{
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ecf0f1;
+		border-radius: 3px;
+		margin-top: 5px;
+	}
+	.form-registration 
+	#name:focus,
+	#surname:focus,
+	#email:focus,
+	#pswd-1:focus,
+	#pswd-2:focus{
+		border: 1px solid #bdc3c7;
+	}
+	.form-registration .btn-sub-log{
+		padding: 0;
+	}
+	.form-registration .btn-sub-log #submit{
+		width: 200px;
+		padding: 10px;
+		border: none;
+		border-radius: 3px;
+		margin-top: 5px;
+		background-color: #3498db;
+		color: white;
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 14px;
+	}
+	.form-registration .btn-sub-log a{
+		text-decoration: none;
+		color: #3498db;
+		outline: none;
+		font-size: 14px;
+	}	/*END REG.HTML*/
+	/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+	/*------------------------------------------------------------------------------*/
+	header{
+		width: 100%;
+		height: 40px;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	}
+	header .logo{
+		display: none;
+	}
+	header .menu nav{
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		margin-top: -1px;
+	}
+	header .menu nav .close{
+		top: 10px;
+		left: 10px;
+	}
+	header .menu nav .link-settings a{
+		margin-top: 20px;
+		font-size: 20px;
+	}
+	main{
+		width: 100%;
+		display: block;
+		border: none;
+		position: relative;
+	}
+	main .contact-list{
+		transition: 300ms;
+	}
+	main .contact-list .contact{
+		height: 10vh;
+		padding: 15px 0 20px 10px;
+		display: flex;
+		align-items: center;
+	}
+	main .messages-nav{
+		height: 84vh;/*////////////////////////////////////////////////////////////////*/
+		transition: 300ms;
+		border: none;
+		display: grid;
+		grid-template-rows: 70% 10% 20%
+	}
+	.send-option{
+		padding: 0;
+	}
+	main .messages-nav .send-option .clip{
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.file-name{
+		height: 30px;
+	}
+	main .messages-nav .send-option .clip img{
+		max-width: 50%
+	}
+	main .messages-nav .send-option .send{
+		padding: 0 3px 0 3px;
+		display: flex;
+		align-items: center;
+	}
+	/*------------------------------------------------------------------------------*/
+}
+
+
+
+
+
+
+
+
+
+/*------------------------ Search -----------------------------*/
+.search{
+			width: 900px;
+			padding: 10px;
+			display: grid;
+			grid-template-columns: 5% 80% 15%;
+			margin: 20px auto;
+			align-items: center;
+		}
+		.search #back{
+			padding: 9px;
+			border: none;
+			background-color: #2980b9;
+			color: #ffffff;
+			font-size: 20px;
+			font-weight: 600;
+			margin-right: 5px;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		.search #search{
+			padding: 10px;
+			border: 1px solid #2980b9;
+			border-radius: 4px;
+			color: #2c3e50;
+			font-size: 16px;
+		}
+		.search #go{
+			padding: 11px;
+			border: none;
+			background-color: #2980b9;
+			color: #ffffff;
+			font-size: 14px;
+			margin-left: 5px;
+			border-radius: 4px;
+		}
+
+		.content{
+			width: 900px;
+			padding: 10px;
+			margin: 10px auto;
+		}
+		.content .result_search{
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #2980b9;
+			background-color: #ecf0f1;
+			border-radius: 3px;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			align-items: center;
+		}
+		.content .result_search .name, .surname, .email, .opt-cont{
+			text-overflow: ellipsis;
+			color: #2c3e50;
+		}
+		.content .result_search .opt-cont{
+			cursor: pointer;
+			text-align: center;
+			border: 1px solid;
+			padding: 10px 5px 10px 5px;
+			background-color: #3498db;
+			color: #ecf0f1;
+			font-size: 14px;
+			font-weight: 550;
+			letter-spacing: 1px;
+		}
+		.content .result_search .ok{
+			cursor: no-drop;
+			text-align: center;
+			border: 1px solid;
+			padding: 10px 5px 10px 5px;
+			background-color: #3498db;
+			color: #ecf0f1;
+			font-size: 14px;
+			font-weight: 550;
+			letter-spacing: 1px;
+		}
+		@media screen and (max-width: 700px){
+			.search{
+				width: 100%;
+				padding: 0;
+				grid-template-columns: 10% 70% 20%;
+			}
+			.search #back{
+				padding: 9px;
+			}
+			.content{
+				padding: 0px;
+				width: 100%;
+			}
+			.content .result_search{
+				width: 100%;
+				grid-template-columns: 15% 15% 40% 30%;
+				text-align: center;
+			}
+		}
