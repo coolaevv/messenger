@@ -1,0 +1,93 @@
+<?php
+session_start();
+require_once("server/config.php");
+require_once("handlers/crypt.php");
+if(isset($_SESSION['id'])){
+$u_id = $_SESSION['id'];
+$sql = "SELECT `id`, `u_id`, `f_id`, `name`, `surname`, `email` FROM `friends` 
+WHERE `u_id` = '$u_id' ";
+$query = mysqli_query($connection, $sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php echo $_SESSION['name']." ".$_SESSION['surname'];; ?></title>
+	<script type="text/javascript" src="js/jquery.lib/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<div class="menu">
+			<div class="link-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav>
+				<div class="close">
+					<img src="img/close.png" alt="" title="Зактрыть">
+				</div>
+				<div class="link-settings">
+					<a href="inc/mycontacts.php">Мои контакты</a>
+					<a href="inc/search.php">Поиск контактов</a>
+					<a href="inc/settings.php">Настройки</a>
+					<a href="logout.php">Выход</a>
+				</div>
+				<div class="logo-settings">
+					<img src="img/img-settings.png" alt="">
+				</div>
+			</nav>
+			<div class="logo">Messenger</div>
+		</div>
+		<section>
+			
+		</section>
+	</header>
+	<main>
+		<div class="contact-list">
+			<?php
+				foreach($query as $contacts){
+			?>
+			<div class="contact" data="<?php echo encrypt($contacts['f_id'], ENCRYPTION_KEY); ?>">
+				<?php echo $contacts['name']." ".$contacts['surname'];?>		
+			</div>
+			<?php
+				}
+			?>
+		</div>
+		<div class="messages-nav">
+			<div class="messages">
+				<p>Тут будут отображаться Ваши диалоги</p>
+			</div>
+			<div class="files-send">
+				
+			</div>
+			<div class="send-option">
+				<div class="clip">
+					<input type="file" id="file">
+					<img src="img/clip.png" alt="" title="Прикрепить файл">
+				</div>
+				<div class="text-message">
+					<textarea id="message" data=""></textarea>
+				</div>
+				<div class="send">
+					<img src="img/send.png" alt="" title="Отправить">
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/win_sett.js"></script>
+	<script type="text/javascript" src="js/create_dialog.js"></script>
+	<script type="text/javascript" src="js/ws.js"></script>
+</body>
+</html>
+
+<?php
+}else{
+	header("Location: login.html");
+}
+?>
